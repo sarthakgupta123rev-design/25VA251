@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function :A function in JavaScript is a reusable block of code designed to perform a specific task. Functions can take inputs, process them, and return a result.
+// normal func
+
+    //without para
+        function demo1(){
+            console.log("hello ")
+        }
+        
+        demo1();
+
+    //with parameter
+        function demo2(text){
+            console.log("hello "+ text)
+        }
+        demo2("Js");
+
+    //func with default para
+        function add(a,b=10){
+            console.log("hey addition is " +(a+b));
+        }
+        add(3);
+
+// anonymous function: 
+// An anonymous function in JavaScript is a function without a name. Unlike named functions, these are typically used for specific tasks and are often assigned to variables, passed as arguments, or executed immediately. They are particularly useful in scenarios where the function does not need to be reused outside its immediate context.
+
+        let cal=function(){
+            var num1 = 5;
+            var num2 = 10;
+            var num3 = num1 * num2;
+            console.log("multiplication of a, b  : " + num3);
+            
+        }
+        cal();
+
+        // let calculator(a,b){
+        //     var a = 10;
+        //     var b = 10;
+        // }
+//arrow function : 
+//n JavaScript, an arrow function is a shorter syntax for writing functions, introduced in ES6 (ECMAScript 2015).
+//It uses the => syntax and has some differences from regular functions, especially in how it handles this.
+
+
+        let div = (x,y)=>{
+            var num1 = x;
+            var num2 = y;
+            var num3 = x / y;
+            console.log("divition of a, b  : " + num3);
+        }
+        div(100,3)
+    let msg =()=>console.log("hello ABES ");
+    msg();
+
+// callback function: 
+//A callback function is a function passed as an argument to another function, which can be called at a later time. In C++, callbacks are typically implemented using function pointers, lambda expressions, or std::function and std::bind from the <functional> header.
+
+    function substract(callback){
+        var num1 = 10;
+        var num2 = 20;
+        var result = num1 - num2;
+
+    }
+    function displayres(result){
+        console.log("result is :" + res);
+
+    }
+    substract (displayres);
+
+// callback using setTimeout API
+
+    function msgs(){
+        console.log("hello ");
+    }
+    setTimeout(msgs,2000);
+// iife
+(function(a,b){
+    console.log(`first parameter ${a} and 
+    second parameter ${b}`);
+     var res = a+b;
+     console.log(`result is ${res}`);                // {``} considers enter
+})(4,5);
+
+
+// sort code using arrow function
+
+(msg=>console.log("hellow sarthak"))();
+
+//promises
+
+let myPromise=new Promise(function(resolve,reject){
+    let age = 25;
+    if (age >=18){
+        resolve("valid age");
+    }
+    else{
+        reject("wait for next year")
+    }
+});
+myPromise.then(msg=>console.log(msg))
+.catch(error=>console.log(error));
+
+
+//    https://dummyjson.com/products  fetch api using async await
+async function userdata(){
+    let response = await fetch('https://dummyjson.com/products');
+    let responsedata = await response.json();
+    console.log(responsedata);
+
+}
+userdata();
+
+
+
+
+
+async function userdata(){
+    let response = await fetch('https://dummyjson.com/products');
+    let responsedata = await response.json();
+    console.log(responsedata);
+    document.writeIn(responseData.id);
+    document.writeIn(responseData.bio);
+
+}
+userdata();
+
+
+
+// error handling using try catch
+async function userdata(){
+    try{
+    let response = await fetch('https://dummyjson.com/products');
+    let responsedata = await response.json();
+    console.log(responsedata);
+    }
+    catch (error){
+        console.log(error);
+    }
+}
+userdata();
+
+// local storage :Local storage is a web storage feature in JavaScript that allows you to store key-value pairs in a web browser. Unlike cookies, the data stored in local storage does not expire and remains available even after the browser is closed and reopened. This makes it useful for persisting data across sessions, enhancing user experience by maintaining state and preferences.
+
+let myInfo={
+    name : "sarthak",
+    age : 23,
+    mob : +913454654646,
+    email : "srk.gmail.com"
+}
+// convert the object into json string
+let myInfoData = JSON.stringify(myInfo);
+
+// set data
+localStorage.setItem('preference',myInfoData);
+
+// reteriving & praising the objectb back 
+let getMyInfoData= localStorage.getItem('preference');
+
+//parse the object
+const finalData = JSON.parse(getMyInfoData);
+console.log(finalData.name);
+
+//higher function order:
+//map() filter() 
+
+let num=[2,3,4,5,6,7,8,9,5];
+
+// fibnd the sqare of num
+
+let result = num.map(n=>n*n);
+console.log(`square of num is : ${result}`);
+// find the no. greater than 3
+let result2 = num.filter(n=> n>3);
+console.log(` num > 3 is : ${result2}`);
+//find sum of array
+let sum = num.reduce((total,n)=>total+n);
+console.log(`add of array elements : ${sum}`);
+
+
+num.forEach((n)=>console.log(n*2));
+
+    </script>
+</body>
+</html>

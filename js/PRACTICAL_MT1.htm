@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Style Changer</title>
+</head>
+<body id="body">
+
+    <h2 id="text">Hello world</h2>
+
+    <button onclick="changeBg()">Change Background</button>
+    <button onclick="changeTextColor()">Change Text Color</button>
+    <button onclick="increaseFont()">Increase Font Size</button>
+
+    <script>
+        function changeBg() {
+            document.getElementById("body").style.backgroundColor = "lightblue";
+        }
+
+        function changeTextColor() {
+            document.getElementById("text").style.color = "red";
+        }
+
+        function increaseFont() {
+            let text = document.getElementById("text");
+            let currentSize = window.getComputedStyle(text).fontSize;
+            let newSize = parseInt(currentSize) + 5;
+            text.style.fontSize = newSize + "px";
+        }
+    </script>
+
+</body>
+</html>

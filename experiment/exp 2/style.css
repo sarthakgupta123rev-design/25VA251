@@ -1,0 +1,18 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+/* Card Hover Effect */
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+}

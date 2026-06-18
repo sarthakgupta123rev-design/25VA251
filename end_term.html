@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Pattern Generator</title>
+</head>
+<body>
+
+<h2>Number Pattern Generator</h2>
+
+<input type="number" id="num" placeholder="Enter N">
+<button onclick="generatePattern()">Generate</button>
+
+<pre id="result"></pre>
+
+<script>
+function generatePattern() {
+    let n = parseInt(document.getElementById("num").value);
+    let pattern = "";
+
+    for(let i = 1; i <= n; i++) {
+        for(let j = 1; j <= i; j++) {
+            pattern += j;
+        }
+        pattern += "\n";
+    }
+
+    document.getElementById("result").textContent = pattern;
+}
+</script>
+
+</body>
+</html>

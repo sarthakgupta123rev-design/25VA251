@@ -1,0 +1,20 @@
+src
+└── main
+    ├── java
+    │   └── com.example.employeeapi
+    │       ├── EmployeeApiApplication.java
+    │       │
+    │       ├── controller
+    │       │   └── EmployeeController.java
+    │       │
+    │       ├── entity
+    │       │   └── Employee.java
+    │       │
+    │       ├── repository
+    │       │   └── EmployeeRepository.java
+    │       │
+    │       └── service
+    │           └── EmployeeService.java
+    │
+    └── resources
+        └── application.properties

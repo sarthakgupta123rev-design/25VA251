@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops in js</title>
+</head>
+<body>
+    <script>
+        //for  :......
+        
+        let studentsList = ["vk",'viv',"deep","dipak","sneha","shiv"];
+        for(let i=0;i<studentsList.length;i++) {
+                console.log(studentsList[i]);
+        }
+        //while :.........
+        let x=0;
+        while (x<studentsList.length){
+            console.log(studentsList[x]);
+            x++;
+        }
+        // for ..of loop
+        for (let y of studentsList){
+            console.log(y);
+        }
+
+
+        let sarthak={
+                name: "sarthak g",
+                sec: "b",
+                roll_no:"58",
+                branch :"cse ds",
+                add :{
+                    city:"gzb",
+                    local : "chipyana",
+                    pin: 201009,
+
+                },
+                education :null
+        }
+        for (let objkeys in sarthak){
+            console.log(sarthak[objkeys]);
+        }
+    </script>
+</body>
+</html>
